@@ -1,4 +1,7 @@
 # extodo
+vue3.js 기반으로 to do 앱을 만들어보자
+[스스로 만들어보는 todo list](https://choichumji.tistory.com/141)
+
 
 ## Project setup
 ```
