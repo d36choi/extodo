@@ -17,16 +17,6 @@ export default {
     Title,
     ToDoInput,
     ToDoList
-  },
-  data() {
-    return {
-      todos: ['발 닦기']
-    }
-  },
-  methods: {
-    addToDo(content) {
-      this.todos.push(content)
-    }
   }
 }
 </script>

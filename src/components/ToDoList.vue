@@ -8,8 +8,10 @@
 
 <script>
 export default {
-  props: {
-    todos: Array
+  computed: {
+    todos() {
+      return this.$store.state.todos
+    }
   }
 }
 </script>
