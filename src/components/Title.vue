@@ -1,6 +1,6 @@
 <template>
   <div id="title">
-    <h1>{{ name }}</h1>
+    <span>{{ name }}</span>
   </div>
 </template>
 
@@ -13,4 +13,10 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+#title {
+  font-size: 50px;
+  font-weight: 700;
+  color: #292c6d;
+}
+</style>

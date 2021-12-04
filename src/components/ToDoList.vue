@@ -1,9 +1,9 @@
 <template>
   <div id="todolist">
-    <div id="container" v-for="data in todos" :key="data.id">
-      <div id="item">
-        <div id="text">{{ data.content }}</div>
-        <div id="period">{{ this.periods[data.period] }}</div>
+    <div class="container" v-for="data in todos" :key="data.id">
+      <div class="item">
+        <div class="text">{{ data.content }}</div>
+        <div class="period">{{ this.periods[data.period] }}</div>
       </div>
     </div>
   </div>
@@ -24,11 +24,36 @@ export default {
 </script>
 
 <style>
-#container {
-  width: 400px;
-  height: 20px;
-  border-radius: 10px;
+#todolist {
+  margin: 30px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
 }
-#container #item {
+.container {
+  background: white;
+  width: 500px;
+  height: 20px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+.container .item {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+}
+.container .item .text {
+  text-align: left;
+  flex-grow: 5;
+  border-right: solid;
+  border-color: rgb(184, 168, 168);
+}
+.container .item .period {
+  flex-grow: 1;
 }
 </style>

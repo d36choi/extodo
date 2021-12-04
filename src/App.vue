@@ -2,8 +2,8 @@
   <img alt="Vue logo" src="./assets/logo.png" />
   <Title name="TO-DO" />
   <!-- @<customEvent 이름>="실행되는 method이름" -->
-  <to-do-input @add-to-do="addToDo" />
-  <to-do-list :todos="todos" />
+  <to-do-input />
+  <to-do-list />
 </template>
 
 <script>
@@ -21,6 +21,7 @@ export default {
 }
 </script>
 
+// https://colorhunt.co/palette/161853292c6dfaedf0ec255a
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -29,5 +30,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+html {
+  background: #faedf0;
 }
 </style>
