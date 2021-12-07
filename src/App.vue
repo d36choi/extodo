@@ -23,6 +23,8 @@ export default {
 
 // https://colorhunt.co/palette/161853292c6dfaedf0ec255a
 <style>
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -31,8 +33,9 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-
-html {
+html,
+body {
+  font-family: 'Roboto', sans-serif;
   background: #faedf0;
 }
 </style>

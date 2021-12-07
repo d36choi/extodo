@@ -10,7 +10,7 @@
         <option value="night">저녁</option>
       </select>
     </div>
-    <button type="button" @click="addToDo">제출</button>
+    <button class="submit-button" type="button" @click="addToDo">제출</button>
   </div>
 </template>
 
@@ -35,4 +35,35 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+#todoinput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  input {
+    margin: 0 5px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 300px;
+    height: 30px;
+  }
+  .v-model-select {
+    margin: 0 5px;
+    select {
+      border: none;
+      width: 300px;
+      height: 30px;
+    }
+  }
+  .submit-button {
+    width: 50px;
+    height: 30px;
+    margin: 0 5px;
+    border: none;
+    background: #ec255a;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+  }
+}
+</style>

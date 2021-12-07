@@ -3,7 +3,7 @@
     <div class="container" v-for="data in todos" :key="data.id">
       <div class="item">
         <div class="text">{{ data.content }}</div>
-        <div class="period">{{ this.periods[data.period] }}</div>
+        <div :class="'period ' + data.period">{{ this.periods[data.period] }}</div>
       </div>
     </div>
   </div>
@@ -18,12 +18,11 @@ export default {
     todos() {
       return this.$store.state.todos
     }
-  },
-  methods: {}
+  }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 #todolist {
   margin: 30px 30px;
   display: flex;
@@ -41,19 +40,38 @@ export default {
   display: flex;
   justify-content: center;
   margin: 5px;
-}
-.container .item {
-  width: 500px;
-  display: flex;
-  justify-content: center;
-}
-.container .item .text {
-  text-align: left;
-  flex-grow: 5;
-  border-right: solid;
-  border-color: rgb(184, 168, 168);
-}
-.container .item .period {
-  flex-grow: 1;
+  flex-basis: fit-content;
+
+  .item {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 1em 0;
+
+    .text {
+      text-align: left;
+      flex-grow: 1;
+      flex-basis: fit-content;
+    }
+    .period {
+      font-weight: 800;
+      padding: 0.2em 0.4em;
+      border-radius: 5px;
+    }
+    .dawn {
+      background: grey;
+    }
+    .morning {
+      background: orange;
+    }
+    .afternoon {
+      background: skyblue;
+    }
+    .night {
+      background: yellow;
+    }
+  }
 }
 </style>
