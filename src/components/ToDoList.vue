@@ -3,7 +3,10 @@
     <div class="container" v-for="data in todos" :key="data.id">
       <div class="item">
         <div class="text">{{ data.content }}</div>
-        <div :class="'period ' + data.period">{{ this.periods[data.period] }}</div>
+        <div :class="'period ' + data.period">
+          {{ this.periods[data.period] }}
+          <font-awesome-icon icon="sun" :color="this.colors[data.period]" />
+        </div>
       </div>
     </div>
   </div>
@@ -12,7 +15,7 @@
 <script>
 export default {
   data() {
-    return {periods: {dawn: '새벽', morning: '아침', afternoon: '낮', night: '저녁'}}
+    return {periods: {dawn: '새벽', morning: '아침', afternoon: '낮', night: '저녁'}, colors: {dawn: '#FFFFFF', morning: '#FFFFFF', afternoon: '#FFFFFF', night: '#000000'}}
   },
   computed: {
     todos() {
@@ -65,12 +68,15 @@ export default {
     }
     .dawn {
       background: grey;
+      color: white;
     }
     .morning {
       background: orange;
+      color: white;
     }
     .afternoon {
       background: skyblue;
+      color: white;
     }
     .night {
       background: yellow;
