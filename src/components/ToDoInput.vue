@@ -40,6 +40,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 2rem;
   input {
     margin: 0 5px;
     border: 2px solid #000;
@@ -49,11 +50,6 @@ export default {
   }
   .v-model-select {
     margin: 0 5px;
-    select {
-      border: none;
-      width: 300px;
-      height: 30px;
-    }
   }
   .submit-button {
     width: 50px;

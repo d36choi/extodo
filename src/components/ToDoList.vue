@@ -15,7 +15,10 @@
 <script>
 export default {
   data() {
-    return {periods: {dawn: '새벽', morning: '아침', afternoon: '낮', night: '저녁'}, colors: {dawn: '#FFFFFF', morning: '#FFFFFF', afternoon: '#FFFFFF', night: '#000000'}}
+    return {
+      periods: {dawn: '새벽', morning: '아침', afternoon: '낮', night: '저녁'},
+      colors: {dawn: '#FFFFFF', morning: '#FFFFFF', afternoon: '#FFFFFF', night: '#000000'}
+    }
   },
   computed: {
     todos() {

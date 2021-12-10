@@ -1,6 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <Title name="TO-DO" />
+  <Title name="두루뭉실 투두" />
   <!-- @<customEvent 이름>="실행되는 method이름" -->
   <to-do-input />
   <to-do-list />
@@ -24,9 +23,9 @@ export default {
 // https://colorhunt.co/palette/161853292c6dfaedf0ec255a
 <style>
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
-
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -35,7 +34,6 @@ export default {
 }
 html,
 body {
-  font-family: 'Roboto', sans-serif;
   background: #faedf0;
 }
 </style>
