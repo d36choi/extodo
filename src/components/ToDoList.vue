@@ -54,6 +54,9 @@ export default {
       text-align: left;
       flex-grow: 1;
       flex-basis: fit-content;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .period {
       font-weight: 800;
