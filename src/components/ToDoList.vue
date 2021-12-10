@@ -1,12 +1,10 @@
 <template>
   <div id="todolist">
-    <div class="container" v-for="data in todos" :key="data.id">
-      <div class="item">
-        <div class="text">{{ data.content }}</div>
-        <div :class="'period ' + data.period">
-          {{ this.periods[data.period] }}
-          <font-awesome-icon icon="sun" :color="this.colors[data.period]" />
-        </div>
+    <div class="item" v-for="data in todos" :key="data.id">
+      <div class="text">{{ data.content }}</div>
+      <div :class="'period ' + data.period">
+        {{ this.periods[data.period] }}
+        <font-awesome-icon icon="sun" :color="this.colors[data.period]" />
       </div>
     </div>
   </div>
@@ -37,53 +35,48 @@ export default {
 
   flex-direction: column;
 }
-.container {
+.item {
   background: white;
   width: 500px;
-  height: 20px;
-  padding: 10px 10px;
+  margin: 5px;
+  padding: 15px 20px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
-  margin: 5px;
   flex-basis: fit-content;
+  // https://getcssscan.com/css-box-shadow-examples
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
-  .item {
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .text {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    flex-grow: 1;
+    flex-basis: fit-content;
+    white-space: nowrap;
     overflow: hidden;
-    margin: 1em 0;
-
-    .text {
-      text-align: left;
-      flex-grow: 1;
-      flex-basis: fit-content;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .period {
-      font-weight: 800;
-      padding: 0.2em 0.4em;
-      border-radius: 5px;
-    }
-    .dawn {
-      background: grey;
-      color: white;
-    }
-    .morning {
-      background: orange;
-      color: white;
-    }
-    .afternoon {
-      background: skyblue;
-      color: white;
-    }
-    .night {
-      background: yellow;
-    }
+    text-overflow: ellipsis;
+    letter-spacing: -3px;
+  }
+  .period {
+    font-weight: 800;
+    padding: 0.2em 0.4em;
+    border-radius: 5px;
+  }
+  .dawn {
+    background: grey;
+    color: white;
+  }
+  .morning {
+    background: orange;
+    color: white;
+  }
+  .afternoon {
+    background: skyblue;
+    color: white;
+  }
+  .night {
+    background: yellow;
   }
 }
 </style>
