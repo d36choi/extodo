@@ -1,6 +1,5 @@
 <template>
   <Title name="두루뭉실 투두" />
-  <!-- @<customEvent 이름>="실행되는 method이름" -->
   <to-do-input />
   <to-do-list />
 </template>
@@ -22,7 +21,6 @@ export default {
 
 // https://colorhunt.co/palette/161853292c6dfaedf0ec255a
 <style>
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 #app {
   font-family: 'Nanum Gothic', sans-serif;

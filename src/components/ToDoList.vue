@@ -4,7 +4,7 @@
       <div class="text">{{ data.content }}</div>
       <div :class="'period ' + data.period">
         {{ this.periods[data.period] }}
-        <font-awesome-icon icon="sun" :color="this.colors[data.period]" />
+        <font-awesome-icon :icon="this.icons[data.period]" :color="this.colors[data.period]" />
       </div>
     </div>
   </div>
@@ -15,7 +15,8 @@ export default {
   data() {
     return {
       periods: {dawn: '새벽', morning: '아침', afternoon: '낮', night: '저녁'},
-      colors: {dawn: '#FFFFFF', morning: '#FFFFFF', afternoon: '#FFFFFF', night: '#000000'}
+      colors: {dawn: '#FFFFFF', morning: '#FFFFFF', afternoon: '#FFFFFF', night: '#000000'},
+      icons: {dawn: 'bed', morning: 'sun', afternoon: 'utensils', night: 'moon'}
     }
   },
   computed: {
@@ -32,7 +33,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-
   flex-direction: column;
 }
 .item {
