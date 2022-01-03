@@ -1,7 +1,7 @@
 <template>
   <div id="todolist">
-    <div class="item" v-for="data in todos" :key="data.id">
-      <div class="text">{{ data.content }}</div>
+    <div class="item" v-for="(data, index) in todos" :key="index" @click="markDone(index)">
+      <div :class="['text', data.done ? 'done' : '']">{{ data.content }}</div>
       <div :class="'period ' + data.period">
         {{ this.periods[data.period] }}
         <font-awesome-icon :icon="this.icons[data.period]" :color="this.colors[data.period]" />
@@ -22,6 +22,11 @@ export default {
   computed: {
     todos() {
       return this.$store.state.todos
+    }
+  },
+  methods: {
+    markDone(index) {
+      this.$store.state.todos[index].done = !this.$store.state.todos[index].done
     }
   }
 }

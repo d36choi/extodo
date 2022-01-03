@@ -60,7 +60,13 @@ body {
   .night {
     background: yellow;
   }
+  .done {
+    text-decoration: line-through;
+    text-decoration-thickness: 4px;
+    text-decoration-color: #ec255a;
+  }
 }
+
 #todoinput {
   display: flex;
   justify-content: center;
