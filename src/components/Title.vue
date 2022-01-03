@@ -14,14 +14,6 @@ export default {
 }
 </script>
 
-<style>
-#title {
-  font-size: 50px;
-  font-weight: 800;
-  color: #292c6d;
-  letter-spacing: -5px;
-}
-.title-icon {
-  margin-right: 1rem;
-}
+<style lang="scss">
+@import '@/assets/style.scss';
 </style>

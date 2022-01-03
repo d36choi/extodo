@@ -40,6 +40,7 @@ export default {
 
       payload.content = this.content
       payload.period = this.period
+      payload.done = false
       this.$store.commit('addTodo', payload)
       this.content = ''
     },
@@ -49,30 +50,5 @@ export default {
 </script>
 
 <style lang="scss">
-#todoinput {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
-  input {
-    margin: 0 5px;
-    border: 2px solid #000;
-    border-radius: 5px;
-    width: 300px;
-    height: 30px;
-  }
-  .v-model-select {
-    margin: 0 5px;
-  }
-  .submit-button {
-    width: 50px;
-    height: 30px;
-    margin: 0 5px;
-    border: none;
-    background: #ec255a;
-    border-radius: 5px;
-    color: white;
-    font-weight: 700;
-  }
-}
+@import '@/assets/style.scss';
 </style>
