@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import {isEmpty} from '@/utils/helpers.js'
 export default {
   data() {
     return {
@@ -26,11 +27,23 @@ export default {
     addToDo() {
       // vuex commit
       var payload = {}
+
+      if (isEmpty(this.content)) {
+        alert('내용을 입력해주세요.')
+        return
+      }
+
+      if (isEmpty(this.period)) {
+        alert('시기를 선택해주세요.')
+        return
+      }
+
       payload.content = this.content
       payload.period = this.period
       this.$store.commit('addTodo', payload)
       this.content = ''
-    }
+    },
+    isEmpty
   }
 }
 </script>
