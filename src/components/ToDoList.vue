@@ -1,11 +1,16 @@
 <template>
   <div id="todolist">
-    <div class="item" v-for="(data, index) in todos" :key="index" @click="markDone(index)">
-      <div :class="['text', data.done ? 'done' : '']">{{ data.content }}</div>
-      <div :class="'period ' + data.period">
-        {{ this.periods[data.period] }}
-        <font-awesome-icon :icon="this.icons[data.period]" :color="this.colors[data.period]" />
+    <div class="line" v-for="(data, index) in todos" :key="index">
+      <div class="item" @click="markDone(index)">
+        <div :class="['text', data.done ? 'done' : '']">{{ data.content }}</div>
+        <div :class="'period ' + data.period">
+          {{ this.periods[data.period] }}
+          <font-awesome-icon :icon="this.icons[data.period]" :color="this.colors[data.period]" />
+        </div>
       </div>
+      <span @click="removeTodo(index)">
+        <font-awesome-icon class="trash" icon="trash" />
+      </span>
     </div>
   </div>
 </template>
@@ -26,7 +31,10 @@ export default {
   },
   methods: {
     markDone(index) {
-      this.$store.state.todos[index].done = !this.$store.state.todos[index].done
+      this.$store.commit('toggleDone', index)
+    },
+    removeTodo(index) {
+      this.$store.commit('removeTodo', index)
     }
   }
 }

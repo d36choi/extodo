@@ -17,6 +17,11 @@ body {
   align-items: center;
   flex-direction: column;
 }
+.line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .item {
   background: white;
   width: 500px;
@@ -25,7 +30,7 @@ body {
   border-radius: 5px;
   display: flex;
   justify-content: center;
-  flex-basis: fit-content;
+  // flex-basis: fit-content;
   // https://getcssscan.com/css-box-shadow-examples
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
@@ -66,7 +71,13 @@ body {
     text-decoration-color: #ec255a;
   }
 }
-
+.trash {
+  padding-left: 10px;
+  color: gray;
+}
+.trash:hover {
+  color: #ec255a;
+}
 #todoinput {
   display: flex;
   justify-content: center;

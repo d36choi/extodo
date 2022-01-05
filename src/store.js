@@ -12,6 +12,12 @@ const store = createStore({
     // mutation 내 정의된 함수를 이용해야 상태의 변경 가능하다
     addTodo(state, content) {
       state.todos.push(content)
+    },
+    toggleDone(state, index) {
+      state.todos[index].done = !state.todos[index].done
+    },
+    removeTodo(state, index) {
+      state.todos.splice(index, 1)
     }
   }
 })
