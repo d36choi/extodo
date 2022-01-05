@@ -1,9 +1,9 @@
 <template>
   <div id="todoinput">
     <input type="text" v-model="content" @keypress.enter="addToDo" />
-    <div id="v-model-select" class="demo">
-      <select v-model="period">
-        <option disabled value="">Please select one</option>
+    <div>
+      <select v-model="period" class="todoselect">
+        <option disabled value="">목표 시기를 정해주세요.</option>
         <option value="dawn">새벽</option>
         <option value="morning">아침</option>
         <option value="afternoon">점심</option>
